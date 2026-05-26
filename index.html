@@ -280,13 +280,13 @@ tr:hover{background:#f5f8fc}
 <div class="main-tabs">
   <div class="tab-hint">点击切换板块</div>
   <div class="main-tab-nav">
-    <button class="main-tab-btn" data-tab="tab-global" onclick="switchTab(this,'tab-global')">🌍 全球看板</button>
+    <button class="main-tab-btn active" data-tab="tab-global" onclick="switchTab(this,'tab-global')">🌍 全球看板</button>
     <button class="main-tab-btn" data-tab="tab-domestic" onclick="switchTab(this,'tab-domestic')">🏠 国内看板</button>
-    <button class="main-tab-btn active" data-tab="tab-year" onclick="switchTab(this,'tab-year')">📅 年度对比</button>
+    <button class="main-tab-btn" data-tab="tab-year" onclick="switchTab(this,'tab-year')">📅 年度对比</button>
   </div>
 
   <!-- Tab: Global Dashboard -->
-  <div class="main-tab-content" id="tab-global">
+  <div class="main-tab-content active" id="tab-global">
     <div class="row">
       <div class="col-6">
         <div class="card">
@@ -298,7 +298,7 @@ tr:hover{background:#f5f8fc}
           </div>
           <div id="monthly-single">
             <div class="slicer" id="bu-slicer-single"><button class="slicer-btn all-btn active" data-bu="__all__" onclick="switchSingleBU('__all__')">全部</button><button class="slicer-btn" data-bu="LBU" onclick="switchSingleBU('LBU')">LBU</button><button class="slicer-btn" data-bu="FBU" onclick="switchSingleBU('FBU')">FBU</button><button class="slicer-btn" data-bu="ABU" onclick="switchSingleBU('ABU')">ABU</button><button class="slicer-btn" data-bu="PBU" onclick="switchSingleBU('PBU')">PBU</button><button class="slicer-btn" data-bu="GEU" onclick="switchSingleBU('GEU')">GEU</button><button class="slicer-btn" data-bu="GUS" onclick="switchSingleBU('GUS')">GUS</button><button class="slicer-btn" data-bu="HQU" onclick="switchSingleBU('HQU')">HQU</button></div>
-            <div class="chart-box" id="chart-monthly-single" style="height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1779778844731"><div style="position: relative; width: 100px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="125" height="400" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+            <div class="chart-box" id="chart-monthly-single" style="height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1779780061001"><div style="position: relative; width: 646px; height: 320px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="807" height="400" style="position: absolute; left: 0px; top: 0px; width: 646px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
           </div>
           <div id="monthly-multi" style="display:none">
             <div class="slicer slicer-multi" id="bu-slicer-multi"><button class="slicer-btn active" data-bu="LBU" onclick="toggleMultiBU('LBU')">LBU</button><button class="slicer-btn" data-bu="FBU" onclick="toggleMultiBU('FBU')">FBU</button><button class="slicer-btn" data-bu="ABU" onclick="toggleMultiBU('ABU')">ABU</button><button class="slicer-btn" data-bu="PBU" onclick="toggleMultiBU('PBU')">PBU</button><button class="slicer-btn" data-bu="GEU" onclick="toggleMultiBU('GEU')">GEU</button><button class="slicer-btn" data-bu="GUS" onclick="toggleMultiBU('GUS')">GUS</button><button class="slicer-btn" data-bu="HQU" onclick="toggleMultiBU('HQU')">HQU</button></div>
@@ -307,14 +307,14 @@ tr:hover{background:#f5f8fc}
               <button class="btn-link" onclick="selectAllBU()">全选</button>
               <button class="btn-link" onclick="clearAllBU()">清空</button>
             </div>
-            <div class="chart-box" id="chart-monthly-multi" _echarts_instance_="ec_1779778844732" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+            <div class="chart-box" id="chart-monthly-multi" _echarts_instance_="ec_1779780061002" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
           </div>
         </div>
       </div>
       <div class="col-6">
         <div class="card">
           <div class="card-title">BU 成本类型分布</div>
-          <div class="chart-box" id="chart-bu-type" _echarts_instance_="ec_1779778844728" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          <div class="chart-box" id="chart-bu-type" _echarts_instance_="ec_1779780060998" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 646px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="807" height="475" style="position: absolute; left: 0px; top: 0px; width: 646px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
         </div>
       </div>
     </div>
@@ -323,13 +323,13 @@ tr:hover{background:#f5f8fc}
       <div class="col-6">
         <div class="card">
           <div class="card-title">国内/海外月度成本趋势（2026年1-4月）</div>
-          <div class="chart-box" id="chart-dom-ov" _echarts_instance_="ec_1779778844729" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          <div class="chart-box" id="chart-dom-ov" _echarts_instance_="ec_1779780060999" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 646px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="807" height="475" style="position: absolute; left: 0px; top: 0px; width: 646px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(383px, 134px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;">4月<br><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#0d47a1;"></span>国内: 36.26万<br><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#42a5f5;"></span>海外: 57.34万<br><b>合计: 93.60万</b></div></div>
         </div>
       </div>
       <div class="col-6">
         <div class="card">
           <div class="card-title">国内/海外成本类型分布</div>
-          <div class="chart-box" id="chart-region-type" _echarts_instance_="ec_1779778844738" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          <div class="chart-box" id="chart-region-type" _echarts_instance_="ec_1779780061008" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 646px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="807" height="475" style="position: absolute; left: 0px; top: 0px; width: 646px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(98px, 54px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">人员优化</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#0d47a1;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">国内</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">268.99</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#42a5f5;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">海外</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">151.22</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
         </div>
       </div>
     </div>
@@ -338,13 +338,13 @@ tr:hover{background:#f5f8fc}
       <div class="col-6">
         <div class="card">
           <div class="card-title">成本类型占比（饼图）</div>
-          <div class="chart-box" id="chart-type-pie" _echarts_instance_="ec_1779778844737" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(161px, 262px, 0px); border-color: rgb(229, 57, 53); pointer-events: none; visibility: hidden; opacity: 0;">人员优化补偿金: 420.2079万 (89.25%)</div></div>
+          <div class="chart-box" id="chart-type-pie" _echarts_instance_="ec_1779780061007" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 646px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="807" height="475" style="position: absolute; left: 0px; top: 0px; width: 646px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
         </div>
       </div>
       <div class="col-6">
         <div class="card">
           <div class="card-title">国家/地区 维度成本分布Top10</div>
-          <div class="chart-box" id="chart-country" _echarts_instance_="ec_1779778844730" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          <div class="chart-box" id="chart-country" _echarts_instance_="ec_1779780061000" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 646px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="807" height="475" style="position: absolute; left: 0px; top: 0px; width: 646px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(429px, 147px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;">美国<br>40.40万</div></div>
         </div>
       </div>
     </div>
@@ -370,11 +370,11 @@ tr:hover{background:#f5f8fc}
         <div class="card">
           <div class="card-title">国内BU优化人数分布（人员优化 vs 劳动争议）
             <div class="toggle-group" id="dom-chart-toggle">
-              <button class="toggle-btn active" onclick="switchDomChartLevel('bu')">按BU</button>
-              <button class="toggle-btn" onclick="switchDomChartLevel('dept')">按部门</button>
+              <button class="toggle-btn" onclick="switchDomChartLevel('bu')">按BU</button>
+              <button class="toggle-btn active" onclick="switchDomChartLevel('dept')">按部门</button>
             </div>
           </div>
-          <div class="chart-box" id="chart-dom-bu" _echarts_instance_="ec_1779778844733" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          <div class="chart-box" id="chart-dom-bu" _echarts_instance_="ec_1779780061009" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(382px, 168px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">Gofo财务部</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#e53935;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">劳动争议</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">0</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#0d47a1;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">人员优化</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">0</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
         </div>
       </div>
       <div class="col-6">
@@ -390,7 +390,7 @@ tr:hover{background:#f5f8fc}
               <button class="toggle-btn" onclick="switchDomSavingSubLevel('dispute')">劳动争议</button>
             </div>
           </div>
-          <div class="chart-box" id="chart-dom-saving" _echarts_instance_="ec_1779778844734" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          <div class="chart-box" id="chart-dom-saving" _echarts_instance_="ec_1779780061004" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(114px, 65px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">人员优化</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#90caf9;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">法定/诉求成本</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">325.72</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#0d47a1;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">实际/最终成本</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">268.99</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#43a047;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">节省成本</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">56.73</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
         </div>
       </div>
     </div>
@@ -420,18 +420,18 @@ tr:hover{background:#f5f8fc}
   </div>
 
   <!-- Tab: Year Comparison -->
-  <div class="main-tab-content active" id="tab-year">
+  <div class="main-tab-content" id="tab-year">
     <div class="row">
       <div class="col-6">
         <div class="card">
           <div class="card-title">各BU年度成本对比 2025年1-4月 vs 2026年1-4月</div>
-          <div class="chart-box" id="chart-year-bu" _echarts_instance_="ec_1779778844735" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 646px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="807" height="475" style="position: absolute; left: 0px; top: 0px; width: 646px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+          <div class="chart-box" id="chart-year-bu" _echarts_instance_="ec_1779780061005" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
         </div>
       </div>
       <div class="col-6">
         <div class="card">
           <div class="card-title">成本类型年度对比</div>
-          <div class="chart-box" id="chart-year-type" _echarts_instance_="ec_1779778844736" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 646px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="807" height="475" style="position: absolute; left: 0px; top: 0px; width: 646px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(229px, 73px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">律师咨询</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#90caf9;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">2025年1-4月</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">23.2511</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#0d47a1;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">2026年1-4月</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">47.0752</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+          <div class="chart-box" id="chart-year-type" _echarts_instance_="ec_1779780061006" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 100px; height: 380px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="125" height="475" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 380px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(269px, 88px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">律师咨询</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#90caf9;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">2025年1-4月</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">23.2511</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#0d47a1;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">2026年1-4月</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">47.0752</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
         </div>
       </div>
     </div>
@@ -1410,27 +1410,6 @@ function switchTab(btn, tabId) {
 // ===========================
 // EXPORT
 // ===========================
-function exportPNG() {
-  var btn = event.target;
-  btn.textContent = '生成中...';
-  btn.disabled = true;
-  html2canvas(document.getElementById('dashboard'), {
-    scale: 2, backgroundColor: '#f0f2f5',
-    useCORS: true, logging: false
-  }).then(function(canvas) {
-    var link = document.createElement('a');
-    link.download = '非薪资类人力成本看板.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    btn.textContent = '📷 导出PNG';
-    btn.disabled = false;
-  }).catch(function() {
-    btn.textContent = '📷 导出PNG';
-    btn.disabled = false;
-    alert('导出失败，请重试');
-  });
-}
-
 function downloadHTML() {
   var html = document.documentElement.outerHTML;
   var blob = new Blob(['<!DOCTYPE html>\n'+html], {type:'text/html;charset=UTF-8'});
@@ -1439,6 +1418,80 @@ function downloadHTML() {
   link.href = URL.createObjectURL(blob);
   link.click();
   URL.revokeObjectURL(link.href);
+}
+
+function exportPNG() {
+  var btn = event.target;
+  btn.textContent = '生成中...';
+  btn.disabled = true;
+
+  var dashboard = document.getElementById('dashboard');
+  var rect = dashboard.getBoundingClientRect();
+  var scale = 2;
+  var w = rect.width * scale;
+  var h = rect.height * scale;
+  var bgColor = '#f0f2f5';
+
+  // Create offscreen canvas
+  var mainCanvas = document.createElement('canvas');
+  mainCanvas.width = w;
+  mainCanvas.height = h;
+  var ctx = mainCanvas.getContext('2d');
+  ctx.fillStyle = bgColor;
+  ctx.fillRect(0, 0, w, h);
+
+  // Collect chart positions and data URLs
+  var chartImgs = [];
+  Object.keys(charts).forEach(function(id) {
+    var ch = charts[id];
+    if (!ch || ch.isDisposed()) return;
+    try {
+      var url = ch.getDataURL({ type: 'png', pixelRatio: scale, backgroundColor: '#fff' });
+      var dom = document.getElementById(id);
+      if (!dom || !url) return;
+      var box = dom.closest('.chart-box') || dom;
+      var br = box.getBoundingClientRect();
+      chartImgs.push({ url: url, x: br.left - rect.left, y: br.top - rect.top, w: br.width, h: br.height });
+    } catch(e) {}
+  });
+
+  if (chartImgs.length === 0) {
+    btn.textContent = '📷 导出PNG';
+    btn.disabled = false;
+    alert('无图表可导出');
+    return;
+  }
+
+  // Draw all chart images onto main canvas
+  var loaded = 0;
+  chartImgs.forEach(function(item) {
+    var img = new Image();
+    img.onload = function() {
+      ctx.drawImage(img, item.x * scale, item.y * scale, item.w * scale, item.h * scale);
+      loaded++;
+      if (loaded === chartImgs.length) {
+        // All charts drawn, download
+        var link = document.createElement('a');
+        link.download = '非薪资类人力成本看板.png';
+        link.href = mainCanvas.toDataURL('image/png');
+        link.click();
+        btn.textContent = '📷 导出PNG';
+        btn.disabled = false;
+      }
+    };
+    img.onerror = function() {
+      loaded++;
+      if (loaded === chartImgs.length) {
+        var link = document.createElement('a');
+        link.download = '非薪资类人力成本看板.png';
+        link.href = mainCanvas.toDataURL('image/png');
+        link.click();
+        btn.textContent = '📷 导出PNG';
+        btn.disabled = false;
+      }
+    };
+    img.src = item.url;
+  });
 }
 
 // ===========================
