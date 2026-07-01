@@ -101,7 +101,7 @@ th.sort-active .sort-arrow{opacity:1;color:#0d47a1}
 td{padding:7px 10px;border-bottom:1px solid #eef1f5}
 tr:hover{background:#f5f8fc}
 .num{text-align:right;font-variant-numeric:tabular-nums}
-.table-wrap{max-height:420px;overflow-y:auto}
+.table-wrap{max-height:420px;overflow-y:auto;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .table-wrap.tall{max-height:500px}
 .group-header th{background:#e3ecf7;font-weight:600;font-size:12px;color:#3a5a7a;border-bottom:3px solid #b0c4de}
 .group-label-disp{background:#cfdae8!important;color:#2a3a5a!important;font-weight:700!important;text-align:center!important;border-left:2px solid #fff!important;border-right:2px solid #fff!important}
@@ -155,6 +155,71 @@ tr:hover{background:#f5f8fc}
 .two-col>.card .kpi-hero-row{flex:0 0 auto}
 .two-col>.card .kpi-row{flex:1;align-items:stretch}
 .two-col>.card .kpi-row .kpi-card{flex:1;display:flex;flex-direction:column;justify-content:center}
+
+/* ===== 移动端响应式 ===== */
+@media (max-width: 768px) {
+  body{padding:10px}
+  .header{padding:18px 16px;border-radius:10px;margin-bottom:14px;gap:10px;flex-direction:column;align-items:flex-start}
+  .header h1{font-size:20px}
+  .header .subtitle{font-size:12px}
+  .header-right{width:100%}
+  .btn-html{padding:8px 14px;font-size:13px;flex:1;text-align:center}
+
+  .card{padding:10px 12px;margin-bottom:10px;border-radius:8px}
+  .card-title{font-size:13px;margin-bottom:8px}
+  .chart-box{height:300px}
+
+  .row{gap:10px;margin-bottom:10px}
+  .col-7,.col-5,.col-6,.col-4{flex:1 1 100%;min-width:0}
+
+  .two-col{gap:10px}
+  .two-col>*{min-width:0;flex:1 1 100%}
+
+  .kpi-hero{min-width:100px;padding:8px 10px}
+  .kpi-hero .hero-value{font-size:20px}
+  .kpi-hero .hero-label{font-size:11px}
+  .kpi-hero .hero-sub{font-size:9px}
+  .kpi-hero-row{gap:6px;margin-bottom:6px}
+  .kpi-row{gap:6px;margin-bottom:6px}
+  .kpi-card{min-width:100px;padding:8px 10px;min-height:60px}
+  .kpi-card .kpi-value{font-size:16px}
+  .kpi-card .kpi-label{font-size:10px}
+  .kpi-card .kpi-detail{font-size:9px}
+
+  .main-tab-btn{padding:10px 12px;font-size:13px}
+  .main-tab-content{padding:12px}
+
+  .section-title{font-size:14px;margin:12px 0 8px 0}
+
+  .table-wrap{max-height:300px}
+  .table-wrap.tall{max-height:360px}
+  table{font-size:12px}
+  th,td{padding:5px 6px}
+
+  .slicer{gap:4px;margin-bottom:8px}
+  .slicer-btn{padding:3px 10px;font-size:11px}
+
+  .summary-box{padding:8px 12px}
+  .summary-box .sum-item{font-size:12px}
+
+  .toggle-group{margin-left:0;margin-top:6px}
+  .toggle-btn{padding:4px 12px;font-size:12px}
+
+  .sub-tab-nav{gap:3px;margin-bottom:10px}
+  .sub-tab-btn{padding:5px 10px;font-size:11px}
+}
+
+@media (max-width: 480px) {
+  body{padding:6px}
+  .header{padding:14px 12px;border-radius:8px;margin-bottom:10px}
+  .header h1{font-size:17px}
+  .card{padding:8px 10px;margin-bottom:8px}
+  .chart-box{height:260px}
+  .kpi-hero .hero-value{font-size:18px}
+  .kpi-card .kpi-value{font-size:15px}
+  .main-tab-btn{padding:8px 8px;font-size:12px}
+  .main-tab-content{padding:8px}
+}
 </style>
 <meta property="og:description" content="非薪资类人力成本看板">
 <meta property="og:type" content="website">
